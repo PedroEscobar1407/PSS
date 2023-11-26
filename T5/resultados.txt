@@ -1,0 +1,142 @@
+Sistema operativo utilizado
+Linux debian11mate 5.10.0-23-amd64 #1 SMP Debian 5.10.179-1 (2023-05-12) x86_64 GNU/Linux
+==== make sort-c-rot13.run ====
+/opt/riscv/bin/riscv64-unknown-elf-gcc -g -c -Wall -pedantic -std=c2x -march=rv32im -mabi=ilp32 sort-c-rot13.c -o sort-c-rot13.o
+/opt/riscv/bin/riscv64-unknown-elf-gcc -g -c -Wall -pedantic -std=c2x -march=rv32im -mabi=ilp32 test-sort.c -o test-sort.o
+/opt/riscv/bin/riscv64-unknown-elf-gcc -Wall -pedantic -std=c2x -march=rv32im -mabi=ilp32 -g sort-c-rot13.o test-sort.o  -o sort-c-rot13
+qemu-riscv32 sort-c-rot13
+Primera serie de tests con arreglos de solo 2 strings
+Sin caracteres alfabeticos y strings de largo 1
+Ambos strings vacios
+  Arreglo ordenado es: "" "" (rotado es "" "")
+
+Strings iguales
+  Arreglo ordenado es: "=" "=" (rotado es "=" "=")
+Primer string menor que el segundo
+  Arreglo ordenado es: "<" ">" (rotado es "<" ">")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "-" "+" (rotado es "-" "+")
+
+Strings de largo mayor que 1
+Strings iguales
+  Arreglo ordenado es: "!$%&/()=?" "!$%&/()=?" (rotado es "!$%&/()=?" "!$%&/()=?")
+Primer string menor que el segundo
+  Arreglo ordenado es: "=<" "=>" (rotado es "=<" "=>")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "=-" "=+" (rotado es "=-" "=+")
+
+Segunda serie de tests ahora con caracteres alfabeticos
+Strings de largo 1
+Strings iguales
+  Arreglo ordenado es: "a" "a" (rotado es "n" "n")
+Strings iguales
+  Arreglo ordenado es: "z" "z" (rotado es "m" "m")
+Primer string menor que el segundo
+  Arreglo ordenado es: "n" "a" (rotado es "a" "n")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "m" "z" (rotado es "z" "m")
+
+Strings de largo mayor que 1
+Strings iguales
+  Arreglo ordenado es: "agmnsz" "agmnsz" (rotado es "ntzafm" "ntzafm")
+Primer string menor que el segundo
+  Arreglo ordenado es: "az" "aa" (rotado es "nm" "nn")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "am" "an" (rotado es "nz" "na")
+
+Strings de largo distinto
+Primer string menor que el segundo
+  Arreglo ordenado es: "" "abc" (rotado es "" "nop")
+Primer string menor que el segundo
+  Arreglo ordenado es: "az" "azm" (rotado es "nm" "nmz")
+Primer string menor que el segundo
+  Arreglo ordenado es: "az" "azn" (rotado es "nm" "nma")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "zyx" "" (rotado es "mlk" "")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "aza" "az" (rotado es "nmn" "nm")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "azz" "az" (rotado es "nmm" "nm")
+
+Tercera serie: todos los caracteres alfabeticos
+Aprobado
+
+Cuarta serie: todo el arreglo de letras
+El arreglo desordenado es:
+--------------------------
+o p t u i w x r y g z v a b c d e q h m n j f s k l 
+
+El arreglo ordenado es:
+-----------------------
+n o p q r s t u v w x y z a b c d e f g h i j k l m 
+Felicitaciones: todos los tests aprobados
+==== make sort-rv-rot13.run ====
+/opt/riscv/bin/riscv64-unknown-elf-gcc -c -Wall -pedantic -std=c2x -march=rv32im -mabi=ilp32 sort-rv-rot13.s -o sort-rv-rot13.o
+/opt/riscv/bin/riscv64-unknown-elf-gcc -g -c -Wall -pedantic -std=c2x -march=rv32im -mabi=ilp32 test-sort.c -o test-sort.o
+/opt/riscv/bin/riscv64-unknown-elf-gcc -Wall -pedantic -std=c2x -march=rv32im -mabi=ilp32 -g sort-rv-rot13.o test-sort.o  -o sort-rv-rot13
+qemu-riscv32 sort-rv-rot13
+Primera serie de tests con arreglos de solo 2 strings
+Sin caracteres alfabeticos y strings de largo 1
+Ambos strings vacios
+  Arreglo ordenado es: "" "" (rotado es "" "")
+
+Strings iguales
+  Arreglo ordenado es: "=" "=" (rotado es "=" "=")
+Primer string menor que el segundo
+  Arreglo ordenado es: "<" ">" (rotado es "<" ">")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "-" "+" (rotado es "-" "+")
+
+Strings de largo mayor que 1
+Strings iguales
+  Arreglo ordenado es: "!$%&/()=?" "!$%&/()=?" (rotado es "!$%&/()=?" "!$%&/()=?")
+Primer string menor que el segundo
+  Arreglo ordenado es: "=<" "=>" (rotado es "=<" "=>")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "=-" "=+" (rotado es "=-" "=+")
+
+Segunda serie de tests ahora con caracteres alfabeticos
+Strings de largo 1
+Strings iguales
+  Arreglo ordenado es: "a" "a" (rotado es "n" "n")
+Strings iguales
+  Arreglo ordenado es: "z" "z" (rotado es "m" "m")
+Primer string menor que el segundo
+  Arreglo ordenado es: "n" "a" (rotado es "a" "n")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "m" "z" (rotado es "z" "m")
+
+Strings de largo mayor que 1
+Strings iguales
+  Arreglo ordenado es: "agmnsz" "agmnsz" (rotado es "ntzafm" "ntzafm")
+Primer string menor que el segundo
+  Arreglo ordenado es: "az" "aa" (rotado es "nm" "nn")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "am" "an" (rotado es "nz" "na")
+
+Strings de largo distinto
+Primer string menor que el segundo
+  Arreglo ordenado es: "" "abc" (rotado es "" "nop")
+Primer string menor que el segundo
+  Arreglo ordenado es: "az" "azm" (rotado es "nm" "nmz")
+Primer string menor que el segundo
+  Arreglo ordenado es: "az" "azn" (rotado es "nm" "nma")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "zyx" "" (rotado es "mlk" "")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "aza" "az" (rotado es "nmn" "nm")
+Primer string mayor que el segundo
+  Arreglo desordenado es: "azz" "az" (rotado es "nmm" "nm")
+
+Tercera serie: todos los caracteres alfabeticos
+Aprobado
+
+Cuarta serie: todo el arreglo de letras
+El arreglo desordenado es:
+--------------------------
+o p t u i w x r y g z v a b c d e q h m n j f s k l 
+
+El arreglo ordenado es:
+-----------------------
+n o p q r s t u v w x y z a b c d e f g h i j k l m 
+Felicitaciones: todos los tests aprobados

@@ -1,0 +1,33 @@
+Sistema operativo utilizado
+Linux debian11mate 5.10.0-21-amd64 #1 SMP Debian 5.10.162-1 (2023-01-21) x86_64 GNU/Linux
+==== run-san ====
+gcc -g -DSAN=1 -fsanitize=address -fsanitize=undefined -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-elim-rango.c elim-rango.c -lm -o elim-rango.bin-san
+./elim-rango.bin-san
+Tests de unidad
+Test de robustez con lista de 2055 nodos
+
+Felicitaciones!  Paso todos los tests
+==== run-g ====
+gcc -g -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-elim-rango.c elim-rango.c -lm -o elim-rango.bin-g
+./elim-rango.bin-g
+Tests de unidad
+Test de robustez con lista de 2055 nodos
+
+Felicitaciones!  Paso todos los tests
+==== run ====
+gcc -O -DOPT=1 -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-elim-rango.c elim-rango.c -lm -o elim-rango.bin
+# Midiendo cuanto demora la solucion de referencia
+rm -f tiempo-ref.txt
+chmod +x prof.ref-x86_64
+./prof.ref-x86_64 -1 > /dev/null
+# Tiempo de referencia =  1439
+# Verificando y comparando con su solucion
+./elim-rango.bin `cat tiempo-ref.txt`
+Tests de unidad
+Test de robustez con lista de 2055 nodos
+Test de eficiencia con lista de 25000023 nodos
+Tiempo tomado por su solucion: 1382 milisegundos
+Tiempo tomado por la solucion de referencia: 1439 milisegundos
+Porcentaje de sobrecosto: -3 %
+
+Felicitaciones!  Paso todos los tests

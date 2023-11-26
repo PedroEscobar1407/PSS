@@ -1,0 +1,46 @@
+Sistema operativo utilizado
+Linux debian11mate 5.10.0-21-amd64 #1 SMP Debian 5.10.162-1 (2023-01-21) x86_64 GNU/Linux
+==== run-san ====
+gcc -g -DSAN=1 -fsanitize=address -fsanitize=undefined -DSANITIZE -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-reemplazar.c reemplazar.c -lm -o reemplazar.bin-san
+./reemplazar.bin-san
+Tests de reemplazo
+Test de robustez
+Aprobado
+Tests de reemplazar
+Test de robustez
+Aprobado
+Felicitaciones!
+==== run-g ====
+gcc -g -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-reemplazar.c reemplazar.c -lm -o reemplazar.bin-g
+./reemplazar.bin-g
+Tests de reemplazo
+Test de robustez
+Aprobado
+Tests de reemplazar
+Test de robustez
+Aprobado
+Felicitaciones!
+==== run ====
+gcc -O -DOPT=1 -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-reemplazar.c reemplazar.c -lm -o reemplazar.bin
+Midiendo cuanto demora la solucion del profesor
+rm -f tiempo-ref.txt
+chmod +x prof.ref-x86_64
+./prof.ref-x86_64 ref > /dev/null
+Tiempos de referencia =  14032 8969
+Verificando y comparando con su solucion
+./reemplazar.bin 14032 8969
+Tests de reemplazo
+Test de robustez
+Aprobado
+Tests de reemplazar
+Test de robustez
+Aprobado
+Benchmark de reemplazo
+Tiempo tomado por la solucion del profesor: 14032 milisegundos
+Tiempo de cpu usado por su version: 6130 milisegundos
+Porcentaje de sobrecosto: -56 %
+Benchmark de reemplazar
+Tiempo tomado por la solucion del profesor: 8969 milisegundos
+Tiempo de cpu usado por su version: 7479 milisegundos
+Porcentaje de sobrecosto: -16 %
+Felicitaciones!

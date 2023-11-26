@@ -1,0 +1,578 @@
+Sistema operativo utilizado
+Linux debian11mate 5.10.0-23-amd64 #1 SMP Debian 5.10.179-1 (2023-05-12) x86_64 GNU/Linux
+==== run-san ====
+gcc -g -DSAN=1 -fsanitize=address -fsanitize=undefined -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-maleta.c maleta.c -lm -o maleta.bin-san
+./maleta.bin-san
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 486
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 5048, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Tiempo= 1994  speedup= 2.53159  numero de articulos seleccionados= 24  valor= 502.6
+Test 2 aprobado: speedup >= 1.5x
+
+Felicitaciones: su tarea funciona
+==== run-g ====
+gcc -g -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-maleta.c maleta.c -lm -o maleta.bin-g
+./maleta.bin-g
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 469.5
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 3499, numero de articulos seleccionados= 24  valor= 502.6
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Tiempo= 1451  speedup= 2.41144  numero de articulos seleccionados= 24  valor= 502.6
+Test 2 aprobado: speedup >= 1.5x
+
+Felicitaciones: su tarea funciona
+==== run ====
+gcc -O -DOPT=1 -Wall -Werror -pedantic -std=c18 -Wno-unused-function  test-maleta.c maleta.c -lm -o maleta.bin
+./maleta.bin
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Test 1: Un ejemplo pequeño
+Calculando secuencialmente
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Calculando en paralelo
+k= 8000000  numero de articulos seleccionados= 3  valor= 460
+Test 1 aprobado
+
+--------------------------------------------------
+
+Test 2: Uno ejemplo grande con n=32
+Precalentando secuencialmente
+k= 100000  numero de articulos seleccionados= 23  valor= 471
+Calculando secuencialmente con k= 10000000 combinaciones
+Tiempo= 2962, numero de articulos seleccionados= 23  valor= 493.5
+
+-----
+Calculando en paralelo con k= 10000000 combinaciones, intento 1
+Tiempo= 1201  speedup= 2.46628  numero de articulos seleccionados= 24  valor= 502.6
+Test 2 aprobado: speedup >= 1.5x
+
+Felicitaciones: su tarea funciona

@@ -1,0 +1,338 @@
+Sistema operativo utilizado
+Linux debian11mate 5.10.0-21-amd64 #1 SMP Debian 5.10.162-1 (2023-01-21) x86_64 GNU/Linux
+==== run-san ====
+gcc -g -DSAN=1 -fsanitize=address -fsanitize=undefined -Wall -Werror -pedantic -std=c18 -Wno-unused-function  consultar.c pss.c -lm -o consultar.bin-san
+./test-consultar.sh ./consultar.bin-san
+-----------------------------------------------------------
+Test de la llaves existentes de dicc.txt
+Ejecutando: ./consultar.bin-san dicc.txt embarcacion
+todo tipo de artilugio capaz de navegar en el agua                  
+
+Ejecutando: ./consultar.bin-san dicc.txt casa
+edificacion construida para ser habitada                                   
+
+Ejecutando: ./consultar.bin-san dicc.txt lluvia
+precipitacion de particulas liquidas de agua                             
+
+Ejecutando: ./consultar.bin-san dicc.txt alimento
+sustancia ingerida por un ser vivo                                     
+
+Ejecutando: ./consultar.bin-san dicc.txt celular
+aparato portatil de un sistema de telefonia celular                     
+
+Ejecutando: ./consultar.bin-san dicc.txt canario
+ave paseriforme de la familia de los fringilidos                        
+
+Ejecutando: ./consultar.bin-san dicc.txt palacio
+edificio utilizado como residencia de un magnate                        
+
+Ejecutando: ./consultar.bin-san dicc.txt bolsillo
+bolsa pequena                                                          
+
+Ejecutando: ./consultar.bin-san dicc.txt correr
+andar tan rapidamente que los pies quedan en el aire                     
+
+Ejecutando: ./consultar.bin-san dicc.txt nadar
+trasladarse en el agua, con los brazos y sin tocar el suelo               
+
+Ejecutando: ./consultar.bin-san dicc.txt posada
+establecimiento economico de hospedaje para viajeros                     
+
+Ejecutando: ./consultar.bin-san dicc.txt taladro
+herramienta aguda o cortante con que se agujerea la madera              
+
+Ejecutando: ./consultar.bin-san dicc.txt perro
+mamifero domestico con olfato muy fino, inteligente y leal                
+
+Ejecutando: ./consultar.bin-san dicc.txt techo
+parte superior de un edificio que lo cubre y cierra                       
+
+-----------------------------------------------------------
+Test de una llave inexistente
+Ejecutando: ./consultar.bin-san dicc.txt gato
+dicc.txt: el diccionario no contiene la llave gato
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test con un diccionario inexistente
+Ejecutando: ./consultar.bin-san nodicc.txt bolsillo
+nodicc.txt: No such file or directory
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test con diccionario sin permiso de lectura
+Ejecutando: ./consultar.bin-san /tmp/dicc.txt posada
+/tmp/dicc.txt: Permission denied
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de uso incorrecto de parametros
+Ejecutando: ./consultar.bin-san dicc.txt bolsillo bolsa
+Uso: ./consultar.bin <diccionario> <llave>
+Bien.  Se diagnostico correctamente el error.
+Ejecutando: ./consultar.bin-san bolsillo
+Uso: ./consultar.bin <diccionario> <llave>
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario vacio
+Ejecutando: ./consultar.bin-san vacio.txt perro
+vacio.txt: el dicionario esta vacio
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario con lineas de tamaño variable
+Ejecutando: ./consultar.bin-san dicc-bad.txt perro
+dicc-bad.txt: linea 30 de tamaño incorrecto
+Bien.  Se diagnostico correctamente el error.
+Ejecutando: ./consultar.bin-san dicc-bad2.txt taladro
+dicc-bad2.txt: el tamaño del archivo no es multiplo del tamaño de la linea
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario con una linea sin :
+Ejecutando: ./consultar.bin-san dicc-bad3.txt celular
+dicc-bad3.txt: linea 28 no posee : para terminar la llave
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario de tamano distinto
+Ejecutando: ./consultar.bin-san dicc2.txt celular
+aparato portatil de un sistema de telefonia celular           
+
+Ejecutando: ./consultar.bin-san dicc2.txt taladro
+herramienta aguda o cortante con que se agujerea la madera    
+
+Ejecutando: ./consultar.bin-san dicc2.txt pedro
+dicc2.txt: el diccionario no contiene la llave pedro
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de busqueda en un diccionario completamente lleno
+Ejecutando: ./consultar.bin-san dicc3.txt celular
+aparato portatil de un sistema de telefonia celular           
+
+Ejecutando: ./consultar.bin-san dicc3.txt posada
+establecimiento economico de hospedaje para viajeros           
+
+Ejecutando: ./consultar.bin-san dicc3.txt gato
+dicc3.txt: el diccionario no contiene la llave gato
+Bien.  Se diagnostico correctamente el error.
+
+Felicitaciones: aprobo todos los tests
+==== run-g ====
+gcc -g -Wall -Werror -pedantic -std=c18 -Wno-unused-function  consultar.c pss.c -lm -o consultar.bin-g
+./test-consultar.sh ./consultar.bin-g
+-----------------------------------------------------------
+Test de la llaves existentes de dicc.txt
+Ejecutando: ./consultar.bin-g dicc.txt embarcacion
+todo tipo de artilugio capaz de navegar en el agua                  
+
+Ejecutando: ./consultar.bin-g dicc.txt casa
+edificacion construida para ser habitada                                   
+
+Ejecutando: ./consultar.bin-g dicc.txt lluvia
+precipitacion de particulas liquidas de agua                             
+
+Ejecutando: ./consultar.bin-g dicc.txt alimento
+sustancia ingerida por un ser vivo                                     
+
+Ejecutando: ./consultar.bin-g dicc.txt celular
+aparato portatil de un sistema de telefonia celular                     
+
+Ejecutando: ./consultar.bin-g dicc.txt canario
+ave paseriforme de la familia de los fringilidos                        
+
+Ejecutando: ./consultar.bin-g dicc.txt palacio
+edificio utilizado como residencia de un magnate                        
+
+Ejecutando: ./consultar.bin-g dicc.txt bolsillo
+bolsa pequena                                                          
+
+Ejecutando: ./consultar.bin-g dicc.txt correr
+andar tan rapidamente que los pies quedan en el aire                     
+
+Ejecutando: ./consultar.bin-g dicc.txt nadar
+trasladarse en el agua, con los brazos y sin tocar el suelo               
+
+Ejecutando: ./consultar.bin-g dicc.txt posada
+establecimiento economico de hospedaje para viajeros                     
+
+Ejecutando: ./consultar.bin-g dicc.txt taladro
+herramienta aguda o cortante con que se agujerea la madera              
+
+Ejecutando: ./consultar.bin-g dicc.txt perro
+mamifero domestico con olfato muy fino, inteligente y leal                
+
+Ejecutando: ./consultar.bin-g dicc.txt techo
+parte superior de un edificio que lo cubre y cierra                       
+
+-----------------------------------------------------------
+Test de una llave inexistente
+Ejecutando: ./consultar.bin-g dicc.txt gato
+dicc.txt: el diccionario no contiene la llave gato
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test con un diccionario inexistente
+Ejecutando: ./consultar.bin-g nodicc.txt bolsillo
+nodicc.txt: No such file or directory
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test con diccionario sin permiso de lectura
+Ejecutando: ./consultar.bin-g /tmp/dicc.txt posada
+/tmp/dicc.txt: Permission denied
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de uso incorrecto de parametros
+Ejecutando: ./consultar.bin-g dicc.txt bolsillo bolsa
+Uso: ./consultar.bin <diccionario> <llave>
+Bien.  Se diagnostico correctamente el error.
+Ejecutando: ./consultar.bin-g bolsillo
+Uso: ./consultar.bin <diccionario> <llave>
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario vacio
+Ejecutando: ./consultar.bin-g vacio.txt perro
+vacio.txt: el dicionario esta vacio
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario con lineas de tamaño variable
+Ejecutando: ./consultar.bin-g dicc-bad.txt perro
+dicc-bad.txt: linea 30 de tamaño incorrecto
+Bien.  Se diagnostico correctamente el error.
+Ejecutando: ./consultar.bin-g dicc-bad2.txt taladro
+dicc-bad2.txt: el tamaño del archivo no es multiplo del tamaño de la linea
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario con una linea sin :
+Ejecutando: ./consultar.bin-g dicc-bad3.txt celular
+dicc-bad3.txt: linea 28 no posee : para terminar la llave
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario de tamano distinto
+Ejecutando: ./consultar.bin-g dicc2.txt celular
+aparato portatil de un sistema de telefonia celular           
+
+Ejecutando: ./consultar.bin-g dicc2.txt taladro
+herramienta aguda o cortante con que se agujerea la madera    
+
+Ejecutando: ./consultar.bin-g dicc2.txt pedro
+dicc2.txt: el diccionario no contiene la llave pedro
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de busqueda en un diccionario completamente lleno
+Ejecutando: ./consultar.bin-g dicc3.txt celular
+aparato portatil de un sistema de telefonia celular           
+
+Ejecutando: ./consultar.bin-g dicc3.txt posada
+establecimiento economico de hospedaje para viajeros           
+
+Ejecutando: ./consultar.bin-g dicc3.txt gato
+dicc3.txt: el diccionario no contiene la llave gato
+Bien.  Se diagnostico correctamente el error.
+
+Felicitaciones: aprobo todos los tests
+==== run ====
+gcc -O -DOPT=1 -Wall -Werror -pedantic -std=c18 -Wno-unused-function  consultar.c pss.c -lm -o consultar.bin
+./test-consultar.sh ./consultar.bin
+-----------------------------------------------------------
+Test de la llaves existentes de dicc.txt
+Ejecutando: ./consultar.bin dicc.txt embarcacion
+todo tipo de artilugio capaz de navegar en el agua                  
+
+Ejecutando: ./consultar.bin dicc.txt casa
+edificacion construida para ser habitada                                   
+
+Ejecutando: ./consultar.bin dicc.txt lluvia
+precipitacion de particulas liquidas de agua                             
+
+Ejecutando: ./consultar.bin dicc.txt alimento
+sustancia ingerida por un ser vivo                                     
+
+Ejecutando: ./consultar.bin dicc.txt celular
+aparato portatil de un sistema de telefonia celular                     
+
+Ejecutando: ./consultar.bin dicc.txt canario
+ave paseriforme de la familia de los fringilidos                        
+
+Ejecutando: ./consultar.bin dicc.txt palacio
+edificio utilizado como residencia de un magnate                        
+
+Ejecutando: ./consultar.bin dicc.txt bolsillo
+bolsa pequena                                                          
+
+Ejecutando: ./consultar.bin dicc.txt correr
+andar tan rapidamente que los pies quedan en el aire                     
+
+Ejecutando: ./consultar.bin dicc.txt nadar
+trasladarse en el agua, con los brazos y sin tocar el suelo               
+
+Ejecutando: ./consultar.bin dicc.txt posada
+establecimiento economico de hospedaje para viajeros                     
+
+Ejecutando: ./consultar.bin dicc.txt taladro
+herramienta aguda o cortante con que se agujerea la madera              
+
+Ejecutando: ./consultar.bin dicc.txt perro
+mamifero domestico con olfato muy fino, inteligente y leal                
+
+Ejecutando: ./consultar.bin dicc.txt techo
+parte superior de un edificio que lo cubre y cierra                       
+
+-----------------------------------------------------------
+Test de una llave inexistente
+Ejecutando: ./consultar.bin dicc.txt gato
+dicc.txt: el diccionario no contiene la llave gato
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test con un diccionario inexistente
+Ejecutando: ./consultar.bin nodicc.txt bolsillo
+nodicc.txt: No such file or directory
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test con diccionario sin permiso de lectura
+Ejecutando: ./consultar.bin /tmp/dicc.txt posada
+/tmp/dicc.txt: Permission denied
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de uso incorrecto de parametros
+Ejecutando: ./consultar.bin dicc.txt bolsillo bolsa
+Uso: ./consultar.bin <diccionario> <llave>
+Bien.  Se diagnostico correctamente el error.
+Ejecutando: ./consultar.bin bolsillo
+Uso: ./consultar.bin <diccionario> <llave>
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario vacio
+Ejecutando: ./consultar.bin vacio.txt perro
+vacio.txt: el dicionario esta vacio
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario con lineas de tamaño variable
+Ejecutando: ./consultar.bin dicc-bad.txt perro
+dicc-bad.txt: linea 30 de tamaño incorrecto
+Bien.  Se diagnostico correctamente el error.
+Ejecutando: ./consultar.bin dicc-bad2.txt taladro
+dicc-bad2.txt: el tamaño del archivo no es multiplo del tamaño de la linea
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario con una linea sin :
+Ejecutando: ./consultar.bin dicc-bad3.txt celular
+dicc-bad3.txt: linea 28 no posee : para terminar la llave
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de un diccionario de tamano distinto
+Ejecutando: ./consultar.bin dicc2.txt celular
+aparato portatil de un sistema de telefonia celular           
+
+Ejecutando: ./consultar.bin dicc2.txt taladro
+herramienta aguda o cortante con que se agujerea la madera    
+
+Ejecutando: ./consultar.bin dicc2.txt pedro
+dicc2.txt: el diccionario no contiene la llave pedro
+Bien.  Se diagnostico correctamente el error.
+-----------------------------------------------------------
+Test de busqueda en un diccionario completamente lleno
+Ejecutando: ./consultar.bin dicc3.txt celular
+aparato portatil de un sistema de telefonia celular           
+
+Ejecutando: ./consultar.bin dicc3.txt posada
+establecimiento economico de hospedaje para viajeros           
+
+Ejecutando: ./consultar.bin dicc3.txt gato
+dicc3.txt: el diccionario no contiene la llave gato
+Bien.  Se diagnostico correctamente el error.
+
+Felicitaciones: aprobo todos los tests

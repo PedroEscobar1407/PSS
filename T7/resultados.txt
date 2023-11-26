@@ -1,0 +1,44 @@
+Sistema operativo utilizado
+Linux debian11mate 5.10.0-23-amd64 #1 SMP Debian 5.10.179-1 (2023-05-12) x86_64 GNU/Linux
+==== run-san ====
+gcc -g -DSAN=1 -fsanitize=address -fsanitize=undefined -Wall -pedantic -Werror -std=c18  compilar.c pss.c -lm -o compilar.bin-san
+Ejecutando: ./compilar.bin-san dir > compilar.txt
+La salida estandar es:
+-------------------------------------------
+dir/222/ejemplo-sort.c
+dir/sort-c.c
+dir/test-comprimir.c
+dir/test-elim-rango.c
+dir/test-reemplazar.c
+-------------------------------------------
+Comparando salida estandar con salida esperada con:
+diff compilar.txt ref-dir.txt
+Aprobado
+==== run-g ====
+gcc -g -Wall -pedantic -Werror -std=c18  compilar.c pss.c -lm -o compilar.bin-g
+Ejecutando: ./compilar.bin-g dir > compilar.txt
+La salida estandar es:
+-------------------------------------------
+dir/222/ejemplo-sort.c
+dir/sort-c.c
+dir/test-comprimir.c
+dir/test-elim-rango.c
+dir/test-reemplazar.c
+-------------------------------------------
+Comparando salida estandar con salida esperada con:
+diff compilar.txt ref-dir.txt
+Aprobado
+==== run ====
+gcc -O -DOPT=1 -Wall -pedantic -Werror -std=c18  compilar.c pss.c -lm -o compilar.bin
+Ejecutando: ./compilar.bin dir > compilar.txt
+La salida estandar es:
+-------------------------------------------
+dir/222/ejemplo-sort.c
+dir/sort-c.c
+dir/test-comprimir.c
+dir/test-elim-rango.c
+dir/test-reemplazar.c
+-------------------------------------------
+Comparando salida estandar con salida esperada con:
+diff compilar.txt ref-dir.txt
+Aprobado
